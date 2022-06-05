@@ -149,7 +149,7 @@ public class Team {
   private List<Player> players;
   private List<News> news;
   private Coach coach;
-  public boolean addTournamentSquad(TournamentSquad tournamentSquad)
+  public boolean addTournamentSquad(TournamentSquad tournamentSquad);
   public boolean addPlayer(Player player);
   public boolean addNews(News news);
 }
