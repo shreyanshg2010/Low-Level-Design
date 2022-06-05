@@ -35,29 +35,23 @@ Here are the top use cases of the Car Rental System:
 5. **Return a vehicle:** To return a vehicle which was checked- out to a member.
 6. **Add equipment:** To add an equipment to a reservation like navigation, child seat, etc.
 7. **Update car log:** To add or update a car log entry, such as refueling, cleaning, damage, etc.
-
-![This is an image](/Use Case Diagram)									
+									
 								
-## Class diagram
-							
-						
-					
-						
-							
+## Class diagram						
 								
 Here are the main classes of our Car Rental System:
 								
-1. CarRentalSystem: The main part of the organization for which this software has been designed.
-2. CarRentalLocation: The car rental system will have multiple locations, each location will have attributes like ‘Name’ to distinguish it from any other locations and ‘Address’ which defines the address of the rental location.
-3. Vehicle: The basic building block of the system. Every vehicle will have a barcode, license plate number, passenger capacity, model, make, mileage, etc. Vehicles can be of multiple types, like car, truck, SUV, etc.
-4. Account: Mainly, we will have two types of accounts in the system, one will be a general member and the other will be a receptionist. Another account can be of the worker taking care of the returned vehicle.
-5. VehicleReservation: This class will be responsible for managing reservations for a vehicle.
-6. Notification: Will take care of sending notifications to members.
-7. VehicleLog: To keep track of all the events related to a vehicle.
-8. RentalInsurance: Stores details about the various rental insurances that members can add to their reservation.
-9. Equipment: Stores details about the various types of equipment that members can add to their reservation.
-10. Service: Stores details about the various types of service that members can add to their reservation, such as additional drivers, roadside assistance, etc.
-11. Bill: Contains different bill-items for every charge for the reservation.
+1. **CarRentalSystem:** The main part of the organization for which this software has been designed.
+2. **CarRentalLocation:** The car rental system will have multiple locations, each location will have attributes like ‘Name’ to distinguish it from any other locations and ‘Address’ which defines the address of the rental location.
+3. **Vehicle:** The basic building block of the system. Every vehicle will have a barcode, license plate number, passenger capacity, model, make, mileage, etc. Vehicles can be of multiple types, like car, truck, SUV, etc.
+4. **Account:** Mainly, we will have two types of accounts in the system, one will be a general member and the other will be a receptionist. Another account can be of the worker taking care of the returned vehicle.
+5. **VehicleReservation:** This class will be responsible for managing reservations for a vehicle.
+6. **Notification:** Will take care of sending notifications to members.
+7. **VehicleLog:** To keep track of all the events related to a vehicle.
+8. **RentalInsurance:** Stores details about the various rental insurances that members can add to their reservation.
+9. **Equipment:** Stores details about the various types of equipment that members can add to their reservation.
+10. **Service:** Stores details about the various types of service that members can add to their reservation, such as additional drivers, roadside assistance, etc.
+11. **Bill:** Contains different bill-items for every charge for the reservation.
 	
   
   
