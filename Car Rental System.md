@@ -61,13 +61,12 @@ Here are the main classes of our Car Rental System:
   
   
 							
-Code
+## Code
 							
 Here is the high-level definition for the classes described above.
 							
-Enums, data types and constants: Here are the required enums, data types, and constants:
+**Enums, data types and constants**
 							
-Java
 ```					
 public enum BillItemType {
 BASE_CHARGE, ADDITIONAL_SERVICE, FINE, OTHER
@@ -119,9 +118,8 @@ public class Person {
 ```					
 				
 							
-Account, Member, Receptionist, and Additional Driver: These classes represent different people that interact with our system:
+**Account, Member, Receptionist, and Additional Driver**
 								
-Java
 ```						
 // For simplicity, we are not defining getter and setter functions.
 // assume that all class attributes are private and accessed through
@@ -155,9 +153,7 @@ public class AdditionalDriver {
 						
 							
 								
-CarRentalSystem and CarRentalLocation: These classes represent the top level classes:
-								
-Java
+**CarRentalSystem and CarRentalLocation**
 							
 ```					
 public class CarRentalLocation {
@@ -171,7 +167,10 @@ public class CarRentalSystem {
   private List<CarRentalLocation> locations;
   public boolean addNewLocation(CarRentalLocation location);
 }
+```
+**Vehicle, VehicleLog, and VehicleReservation**
 
+```
 public abstract class Vehicle {
  
   private String licenseNumber;
@@ -186,7 +185,7 @@ public abstract class Vehicle {
   private int mileage;
   private List<VehicleLog> log;
 
-	public boolean reserveVehicle();
+  public boolean reserveVehicle();
   public boolean returnVehicle();
 }
 
@@ -238,7 +237,7 @@ public class VehicleReservation {
 }		
 ```
 
-VehicleInventory and Search: VehicleInventory will implement an interface ‘Search’ to facilitate the searching of vehicles:							
+**VehicleInventory and Search**					
 Java
 ```
 public interface Search {											
