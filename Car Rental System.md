@@ -21,23 +21,23 @@ We will focus on the following set of requirements while designing our Car Renta
 						
 ## Use case diagram
 								
-We have four main Actors in our system:
-								
-1.**Receptionist**: Mainly responsible for adding and modifying vehicles and workers. Receptionists can also reserve vehicles.						
+We have four main Actors in our system:							
+1.**Receptionist**: Mainly responsible for adding and modifying vehicles and workers. Receptionists can also reserve vehicles.				
 2.**Member**: All members can search the catalog, as well as reserve, pick-up, and return a vehicle.				
-3.**System**: Mainly responsible for sending notifications about overdue vehicles, canceled reservation, etc.						4.**Worker**: Mainly responsible for taking care of a returned vehicle and updating the vehicle log.
+3.**System**: Mainly responsible for sending notifications about overdue vehicles, canceled reservation, etc.						
+4.**Worker**: Mainly responsible for taking care of a returned vehicle and updating the vehicle log.
 								
 Here are the top use cases of the Car Rental System:			
-**Add/Remove/Edit vehicle:** To add, remove or modify a vehicle.	
-**Search catalog:** To search for vehicles by type and availability.
-**Register new account/Cancel membership:** To add a new member or cancel an existing membership.
-**Reserve vehicle:** To reserve a vehicle. Check-out vehicle: To rent a vehicle.
-**Return a vehicle:** To return a vehicle which was checked- out to a member.
-**Add equipment:** To add an equipment to a reservation like navigation, child seat, etc.
-**Update car log:** To add or update a car log entry, such as refueling, cleaning, damage, etc.
+1.**Add/Remove/Edit vehicle:** To add, remove or modify a vehicle.	
+2.**Search catalog:** To search for vehicles by type and availability.
+3.**Register new account/Cancel membership:** To add a new member or cancel an existing membership.
+4.**Reserve vehicle:** To reserve a vehicle. Check-out vehicle: To rent a vehicle.
+5.**Return a vehicle:** To return a vehicle which was checked- out to a member.
+6.**Add equipment:** To add an equipment to a reservation like navigation, child seat, etc.
+7.**Update car log:** To add or update a car log entry, such as refueling, cleaning, damage, etc.
 									
 								
-Class diagram
+## Class diagram
 							
 						
 					
