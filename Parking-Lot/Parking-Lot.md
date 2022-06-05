@@ -102,7 +102,7 @@ public class Admin extends Account {
   public bool addParkingFloor(ParkingFloor floor);
   public bool addParkingSpot(String floorName, ParkingSpot spot);
   public bool addParkingDisplayBoard(String floorName, ParkingDispla
-  public bool addCustomerInfoPanel(String floorName, CustomerInfoPan
+  public bool addCustomerInfoPanel(String floorName, CustomerInfoPanel customerInfoPanel);
   public bool addEntrancePanel(EntrancePanel entrancePanel);
   public bool addExitPanel(ExitPanel exitPanel);
 }
@@ -249,22 +249,22 @@ case ParkingSpotType.MOTORBIKE:
   }
 }
 private void updateDisplayBoardForHandicapped(ParkingSpot spot) {
-  if (this.displayBoard.getHandicappedFreeSpot().getNumber() == sp
+  if (this.displayBoard.getHandicappedFreeSpot().getNumber() == spot.isFree()){
     // find another free handicapped parking and assign to display
     for (String key : handicappedSpots.keySet()) {
       if (handicappedSpots.get(key).isFree()) {
-        this.displayBoard.setHandicappedFreeSpot(handicappedSpots.
+        this.displayBoard.setHandicappedFreeSpot(handicappedSpots.get(key));
       }
-}
+   }
     this.displayBoard.showEmptySpotNumber();
   }
 }
 private void updateDisplayBoardForCompact(ParkingSpot spot) {
-  if (this.displayBoard.getCompactFreeSpot().getNumber() == spot.g
-    // find another free compact parking and assign to displayBoar
+  if (this.displayBoard.getCompactFreeSpot().getNumber() == spot.isFree()){
+    // find another free compact parking and assign to displayBoard
     for (String key : compactSpots.keySet()) {
       if (compactSpots.get(key).isFree()) {
-        this.displayBoard.setCompactFreeSpot(compactSpots.get(key)
+        this.displayBoard.setCompactFreeSpot(compactSpots.get(key));
       }
 }
     this.displayBoard.showEmptySpotNumber();
@@ -309,7 +309,7 @@ public class ParkingDisplayBoard {
   public void showEmptySpotNumber() {
     String message = "";
     if(handicappedFreeSpot.IsFree()){
-      message += "Free Handicapped: " + handicappedFreeSpot.getNumbe
+      message += "Free Handicapped: " + handicappedFreeSpot.getNumber();
     } else {
       message += "Handicapped is full";
     }
@@ -412,11 +412,10 @@ public class ParkingLot {
     }
     // cars can be parked at compact or large spots
     if (type == VehicleType.Car) {
-      return (compactSpotCount + largeSpotCount) >= (maxCompactCount
+      return (compactSpotCount + largeSpotCount) >= (maxCompactCount+ maxLargeCount);
     }
     // electric car can be parked at compact, large or electric spot
-    return (compactSpotCount + largeSpotCount + electricSpotCount) >
-        + maxElectricCount);
+    return (compactSpotCount + largeSpotCount + electricSpotCount) > maxCompactCount + maxLargeCount + maxElectricCount);
   }
   // increment the parking spot count based on the vehicle type
   private boolean incrementSpotCount(VehicleType type) {
