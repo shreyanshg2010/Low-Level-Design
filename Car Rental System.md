@@ -22,19 +22,19 @@ We will focus on the following set of requirements while designing our Car Renta
 ## Use case diagram
 								
 We have four main Actors in our system:							
-1.**Receptionist**: Mainly responsible for adding and modifying vehicles and workers. Receptionists can also reserve vehicles.				
-2.**Member**: All members can search the catalog, as well as reserve, pick-up, and return a vehicle.				
-3.**System**: Mainly responsible for sending notifications about overdue vehicles, canceled reservation, etc.						
-4.**Worker**: Mainly responsible for taking care of a returned vehicle and updating the vehicle log.
+1. **Receptionist**: Mainly responsible for adding and modifying vehicles and workers. Receptionists can also reserve vehicles.				
+2. **Member**: All members can search the catalog, as well as reserve, pick-up, and return a vehicle.				
+3. **System**: Mainly responsible for sending notifications about overdue vehicles, canceled reservation, etc.						
+4. **Worker**: Mainly responsible for taking care of a returned vehicle and updating the vehicle log.
 								
 Here are the top use cases of the Car Rental System:			
-1.**Add/Remove/Edit vehicle:** To add, remove or modify a vehicle.	
-2.**Search catalog:** To search for vehicles by type and availability.
-3.**Register new account/Cancel membership:** To add a new member or cancel an existing membership.
-4.**Reserve vehicle:** To reserve a vehicle. Check-out vehicle: To rent a vehicle.
-5.**Return a vehicle:** To return a vehicle which was checked- out to a member.
-6.**Add equipment:** To add an equipment to a reservation like navigation, child seat, etc.
-7.**Update car log:** To add or update a car log entry, such as refueling, cleaning, damage, etc.
+1. **Add/Remove/Edit vehicle:** To add, remove or modify a vehicle.	
+2. **Search catalog:** To search for vehicles by type and availability.
+3. **Register new account/Cancel membership:** To add a new member or cancel an existing membership.
+4. **Reserve vehicle:** To reserve a vehicle. Check-out vehicle: To rent a vehicle.
+5. **Return a vehicle:** To return a vehicle which was checked- out to a member.
+6. **Add equipment:** To add an equipment to a reservation like navigation, child seat, etc.
+7. **Update car log:** To add or update a car log entry, such as refueling, cleaning, damage, etc.
 									
 								
 ## Class diagram
@@ -46,27 +46,17 @@ Here are the top use cases of the Car Rental System:
 								
 Here are the main classes of our Car Rental System:
 								
-CarRentalSystem: The main part of the organization for which this software has been designed.
-								
-CarRentalLocation: The car rental system will have multiple locations, each location will have attributes like ‘Name’ to distinguish it from any other locations and ‘Address’ which defines the address of the rental location.
-								
-Vehicle: The basic building block of the system. Every vehicle will have a barcode, license plate number, passenger capacity, model, make, mileage, etc. Vehicles can be of multiple types, like car, truck, SUV, etc.
-								
-Account: Mainly, we will have two types of accounts in the system, one will be a general member and the other will be a receptionist. Another account can be of the worker taking care of the returned vehicle.
-								
-VehicleReservation: This class will be responsible for managing reservations for a vehicle.
-								
-Notification: Will take care of sending notifications to members.
-								
-VehicleLog: To keep track of all the events related to a vehicle.
-							
-RentalInsurance: Stores details about the various rental insurances that members can add to their reservation.
-
-Equipment: Stores details about the various types of equipment that members can add to their reservation.
-								
-Service: Stores details about the various types of service that members can add to their reservation, such as additional drivers, roadside assistance, etc.
-								
-Bill: Contains different bill-items for every charge for the reservation.
+1. CarRentalSystem: The main part of the organization for which this software has been designed.
+2. CarRentalLocation: The car rental system will have multiple locations, each location will have attributes like ‘Name’ to distinguish it from any other locations and ‘Address’ which defines the address of the rental location.
+3. Vehicle: The basic building block of the system. Every vehicle will have a barcode, license plate number, passenger capacity, model, make, mileage, etc. Vehicles can be of multiple types, like car, truck, SUV, etc.
+4. Account: Mainly, we will have two types of accounts in the system, one will be a general member and the other will be a receptionist. Another account can be of the worker taking care of the returned vehicle.
+5. VehicleReservation: This class will be responsible for managing reservations for a vehicle.
+6. Notification: Will take care of sending notifications to members.
+7. VehicleLog: To keep track of all the events related to a vehicle.
+8. RentalInsurance: Stores details about the various rental insurances that members can add to their reservation.
+9. Equipment: Stores details about the various types of equipment that members can add to their reservation.
+10. Service: Stores details about the various types of service that members can add to their reservation, such as additional drivers, roadside assistance, etc.
+11. Bill: Contains different bill-items for every charge for the reservation.
 	
   
   
@@ -78,7 +68,7 @@ Here is the high-level definition for the classes described above.
 Enums, data types and constants: Here are the required enums, data types, and constants:
 							
 Java
-'''					
+```					
 public enum BillItemType {
 BASE_CHARGE, ADDITIONAL_SERVICE, FINE, OTHER
 }
@@ -126,13 +116,13 @@ public class Person {
   private String phone;				
 }
 						
-'''					
+```					
 				
 							
 Account, Member, Receptionist, and Additional Driver: These classes represent different people that interact with our system:
 								
 Java
-'''							
+```						
 // For simplicity, we are not defining getter and setter functions.
 // assume that all class attributes are private and accessed through
 // public getter method and modified only through their public sette
@@ -160,7 +150,7 @@ public class AdditionalDriver {
   private String driverID;
   private Person person;							
 }
-'''							
+```							
 						
 						
 							
@@ -169,7 +159,7 @@ CarRentalSystem and CarRentalLocation: These classes represent the top level cla
 								
 Java
 							
-'''					
+```					
 public class CarRentalLocation {
   private String name;
   private Address location;
@@ -246,12 +236,11 @@ public class VehicleReservation {
   public static VehicleReservation fetchReservationDetails(String re
   public List<Passenger> getAdditionalDrivers();
 }		
-'''
+```
 
 VehicleInventory and Search: VehicleInventory will implement an interface ‘Search’ to facilitate the searching of vehicles:							
 Java
-
-'''
+```
 public interface Search {											
 public List<Vehicle> searchByType(String type);
 public List<Vehicle> searchByModel(String model);							
@@ -267,4 +256,4 @@ public class VehicleInventory implements Search {
     // return all vehicles of the given model.
     return vehicleModels.get(query);
 } }
-'''
+```
