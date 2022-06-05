@@ -212,7 +212,7 @@ public class FlightReservation {
   private Map<Passenger, FlightSeat> seatMap;
   private Date creationDate;
   private ReservationStatus status;
-  public static FlightReservation fetchReservationDetails(String res
+  public static FlightReservation fetchReservationDetails(String reservation);
   public List<Passenger> getPassengers();
 }
 public class Itinerary {
