@@ -23,10 +23,9 @@ We will focus on the following set of requirements while designing our Car Renta
 								
 We have four main Actors in our system:
 								
-**Receptionist**: Mainly responsible for adding and modifying vehicles and workers. Receptionists can also reserve vehicles.							
-**Member**: All members can search the catalog, as well as reserve, pick-up, and return a vehicle.				
-**System**: Mainly responsible for sending notifications about overdue vehicles, canceled reservation, etc.								
-**Worker**: Mainly responsible for taking care of a returned vehicle and updating the vehicle log.
+1.**Receptionist**: Mainly responsible for adding and modifying vehicles and workers. Receptionists can also reserve vehicles.						
+2.**Member**: All members can search the catalog, as well as reserve, pick-up, and return a vehicle.				
+3.**System**: Mainly responsible for sending notifications about overdue vehicles, canceled reservation, etc.						4.**Worker**: Mainly responsible for taking care of a returned vehicle and updating the vehicle log.
 								
 Here are the top use cases of the Car Rental System:			
 **Add/Remove/Edit vehicle:** To add, remove or modify a vehicle.	
