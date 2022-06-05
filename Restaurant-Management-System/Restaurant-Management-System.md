@@ -122,7 +122,7 @@ public class Chef extends Employee {
 }
 ```
 
-**Restaurant, Branch, Kitchen, TableChart: **
+**Restaurant, Branch, Kitchen, TableChart:**
 
 ```
 public class Kitchen {
