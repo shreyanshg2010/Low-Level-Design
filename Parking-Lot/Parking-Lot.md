@@ -101,7 +101,7 @@ public abstract class Account {
 public class Admin extends Account {
   public bool addParkingFloor(ParkingFloor floor);
   public bool addParkingSpot(String floorName, ParkingSpot spot);
-  public bool addParkingDisplayBoard(String floorName, ParkingDispla
+  public bool addParkingDisplayBoard(String floorName, ParkingDisplayBoard parkingDisplayBoard);
   public bool addCustomerInfoPanel(String floorName, CustomerInfoPanel customerInfoPanel);
   public bool addEntrancePanel(EntrancePanel entrancePanel);
   public bool addExitPanel(ExitPanel exitPanel);
