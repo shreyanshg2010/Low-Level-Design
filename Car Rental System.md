@@ -36,7 +36,7 @@ Here are the top use cases of the Car Rental System:
 6. **Add equipment:** To add an equipment to a reservation like navigation, child seat, etc.
 7. **Update car log:** To add or update a car log entry, such as refueling, cleaning, damage, etc.
 
-![This is an image](/Use Case Diagram.png)									
+![This is an image](/Use Case Diagram)									
 								
 ## Class diagram
 							
